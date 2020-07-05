@@ -62,8 +62,7 @@ module.exports = {
     filters: {
         'src/views/**/*': 'vueServer',
         'src/controller/index.js': 'vueServer',
-        'src/config/error.js': 'plugins["plugin-exception"]',
-        'src/service/user.js': 'plugins["middleware-account"]'
+        'src/config/error.js': 'plugins["plugin-exception"]'
     },
     completeMessage: 'To get started:\n\n  npm run debug'
 };
