@@ -22,7 +22,6 @@ const app = new Ynn({
     debugging: false,
     configDir:  process.env.NODE_ENV === 'test' ? path.resolve(__dirname, '../test/config'): path.join(os.homedir(), '.frontend-config/')
 });
-{{#vueServer}}
 app.use(historyApiFallback.default({
     index: '/',
     whiteList: ['/api']
