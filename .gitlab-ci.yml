@@ -1,0 +1,8 @@
+variables:
+    GROUP_NAME: "fe-cli"
+    DINGTALK_TOKEN: ""
+
+trigger_build:
+    stage: deploy
+    script:
+        - "curl -X POST -F token=5495e2412550f904acf03dd27a7163 -F ref=master -F variables[PROJECT_ID]=$CI_PROJECT_ID -F variables[PROJECT_NAME]=$CI_PROJECT_NAME -F variables[COMMIT_SHA]=$CI_COMMIT_SHA -F variables[GROUP]=$GROUP_NAME http://git.zuoshouyisheng.com/api/v4/projects/501/trigger/pipeline"
